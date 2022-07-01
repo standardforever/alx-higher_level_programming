@@ -1,0 +1,1 @@
+This directory contains python code related to Data structures: lists, Tuples
