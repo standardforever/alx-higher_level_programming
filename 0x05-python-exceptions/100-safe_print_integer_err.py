@@ -3,10 +3,10 @@ import sys
 
 
 def safe_print_integer_err(value):
+    is_int = True
     try:
         print("{:d}".format(value))
-        return True
     except Exception as e:
-        s = "Exception: " + str(e) + "\n"
-        sys.stderr.write(s)
-        return False
+        print("Exception:", e, file=sys.stderr)
+        is_int = False
+    return is_int
