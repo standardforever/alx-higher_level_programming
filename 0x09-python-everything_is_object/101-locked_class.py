@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-"""
-Locked Class
-"""
+"""blocked class module"""
 
 
 class LockedClass:
-    """ Prevent user to create new attributes """
-    __slots__ = ['first_name']
+    """object prevents dynamic attribute"""
 
-    def __init__(self, first_n=""):
-        self.first_name = first_n
+    __slots__ = ['first_name']

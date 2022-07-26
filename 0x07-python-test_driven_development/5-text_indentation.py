@@ -1,28 +1,25 @@
 #!/usr/bin/python3
 """
-Program that Ident a text according to '.' and '?' symbol
+This is the "5-test_indentation" module.
+The 5-text_indentation module supplies one function, text_indentation(text).
 """
 
 
 def text_indentation(text):
-    """  function that prints a text with 2 new lines after
-    each of these characters: ., ?
-    """
-    if (type(text) is not str or text is None):
+    """splits a text into lines along "?", ":", "." followed by 2 new lines"""
+    if type(text) is not str:
         raise TypeError("text must be a string")
     flag = 0
-    for c in text:
-        if (c == '.' or c == '?' or c == ':'):
-            print(c, end='')
-            print('')
-            print('')
-            flag = 1
-        else:
-            if (flag == 0):
-                print(c, end='')
+    for a in text:
+        if flag == 0:
+            if a == ' ':
+                continue
             else:
-                if (c == ' ' or c == '\t'):
-                    pass
-                else:
-                    print(c, end="")
-                    flag = 0
+                flag = 1
+        if flag == 1:
+            if a == '?' or a == '.' or a == ':':
+                print(a)
+                print()
+                flag = 0
+            else:
+                print(a, end="")
