@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+"""defining read_file function"""
+
+
 def read_file(filename=""):
-	"""It print the content of a file"""
-	with open(filename, 'r', encoding="UTF8") as f:
-		content = f.read()
-		print("{}".format(content))
-	
+    """reads filename with utf-8"""
+    with open(filename, encoding='utf-8') as f:
+        print(f.read(), end="")
