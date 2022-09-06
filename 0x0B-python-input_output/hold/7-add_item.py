@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Contains function that adds and saves to Python obj to JSON file; loads objects
 """
