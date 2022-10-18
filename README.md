@@ -1,1 +1,1 @@
-This directory contains file related to python programming task given by Alx school
+This directory(repo) contains file related to python programming task given by Alx school
