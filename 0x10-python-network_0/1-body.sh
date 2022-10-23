@@ -1,3 +1,3 @@
 #!/bin/bash
 # use curl to display the body of a request
-curl -sI $1
+curl -Ls $1
