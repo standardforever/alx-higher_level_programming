@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -is $1 | grep Content_Length | tail -c 4
