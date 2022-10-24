@@ -2,6 +2,7 @@
 
 """ find the peak  of a list """
 def find_peak(list_of_integers):
+    """Return the peak of the list"""
     x = len(list_of_integers) - 1 
     y = 0
     if x < 0:
