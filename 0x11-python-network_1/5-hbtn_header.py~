@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+"""
+it sends a request and display the value of the variable X-Request-Id
+"""
+import requests
+import sys
+
+
+if __name__ == "__main__":
+    req = requests.get(sys.argv[1])
+    req1 = req.headers.get('X-Request-Id')
+    print(req1.text)
