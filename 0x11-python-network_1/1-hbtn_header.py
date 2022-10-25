@@ -6,7 +6,7 @@ the X-Requested-Id variable
 import sys
 import urllib.request
 
-
-with urllib.request.urlopen(sys.argv[1]) as response:
-    page = response.getheader('X-Request-Id')
-    print(page)
+if __name__ == "__main__":
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        page = response.getheader('X-Request-Id')
+        print(page)
