@@ -2,13 +2,12 @@
 """
 It fetches url
 """
-import urllib.request
+import requests
 
 
 if __name__ == "__main__":
     url = 'https://alx-intranet.hbtn.io/status'
-    with urllib.request.urlopen(url) as response:
-        page = response.read().decode('utf-8')
-        print("Body response:")
-        print("    - type: {}".format(type(page)))
-        print("    - content: {}".format(page))
+    req =  requests.get(url)
+    print("Body response:")
+    print("    - type: {}".format(type(req.text)))
+    print("    - content: {}".format(req.text))
