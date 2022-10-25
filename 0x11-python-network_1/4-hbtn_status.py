@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-"""
-It fetches url
-"""
+""" what's my status """
 import requests
 
 
 if __name__ == "__main__":
-    url = 'https://alx-intranet.hbtn.io/status'
-    req =  requests.get(url)
-    print("Body response:")
-    print("    - type: {}".format(type(req.text)))
-    print("    - content: {}".format(req.text))
+    r = requests.get('https://intranet.hbtn.io/status')
+    print('Body response:')
+    print('\t- type: {}'.format(type(r.text)))
+    print('\t- content: {}'.format(r.text))
