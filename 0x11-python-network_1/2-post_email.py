@@ -10,8 +10,8 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1]
     data['email'] = sys.argv[2]
-    data = urllib.parse(data)
-    data = data.encode('ascii')
+    data = urllib.parse.urlencode(data)
+    data = data.encode('utf-8')
     req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
         page = response.read()
