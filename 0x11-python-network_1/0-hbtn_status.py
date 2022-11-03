@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Prints different results of
